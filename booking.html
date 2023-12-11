@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings</title>
+  <link rel="stylesheet" href="./booking.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <!--Header-->
+    <section class="header">
+      <img src="./logo.png" alt="logo">
+      <section class="header-data">
+        <a href="./Home.html">HOME</a>
+        <a href="./Hotels.html">HOTELS</a>
+        <a href="./Rest.html">RESTAURANTS</a>
+        <a href="./Adven.html">ADVENTURES</a>
+        <a class="active" href="./booking.html">BOOKINGS</a>
+      </section>
+    </section>
+    <section class="introland">
+        <img src="./landscape5.webp" alt="Kandy poolside">
+        <h1>Bookings</h1>      
+    </section>
+
+    <!--Booking Form-->
+    <section class="booking-container">
+        <!-- Room Booking Form -->
+        <section class="room-booking-form">
+            <form action="" id="booking">
+                <section class="form-heading">Room Bookings</section>
+                <section class="user-input">
+                    <section class="input-fields">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter your First Name" required>
+                    </section> 
+                    <section class="input-fields">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter your Last Name" required>
+                    </section> 
+                </section>
+                <section class="user-input">
+                    <section class="input-fields">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" name="contact" id="contact"  maxlength="12" title="Enter a valid telephone Number"  placeholder="Enter your Contact Number"  required/>
+                    </section>
+                    <section class="input-fields">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your E-mail Address" required>
+                    </section>
+                </section>
+
+                <section class="room-types">
+                    <section class="room-input">
+                        <label for="single">Single Rooms</label>
+                        <input type="number" name="rooms" id="single" placeholder="Enter number of Single Rooms required" min="0" max="3" value="0">
+                    </section>
+                    <section class="room-input">
+                        <label for="double">Double Rooms</label>
+                        <input type="number" name="rooms" id="double" placeholder="Enter number of Double Rooms required" min="0" max="3" value="0">
+                    </section>
+                    <section class="room-input">
+                        <label for="triple">Triple Rooms</label>
+                        <input type="number" name="rooms" id="triple" placeholder="Enter number of Triple Rooms required" min="0" max="3" value="0">
+                    </section>
+                </section>
+
+                <section class="user-input">
+                    <section class="input-fields">
+                        <label for="checkin">Check-In Date</label>
+                        <input type="date" name="checkings" id="checkin" required>
+                    </section>
+                    <section class="input-fields">
+                        <label for="checkout">Check-Out Date</label>
+                        <input type="date" name="checkings" id="checkout" required>
+                    </section>
+                </section>
+
+                <h2>Room Upgrades</h2>
+                <section class="upgrade">
+                    <section class="upgrade-checkboxes">
+                        <input type="checkbox" name="extra" id="Garden View">
+                        <section class="upgrade-text">
+                            <span>
+                                Garden View
+                            </span>
+                        </section>
+                    </section>
+
+                    <section class="upgrade-checkboxes">
+                        <input type="checkbox" name="extra" id="Pool Side">
+                        <section class="upgrade-text">
+                            <span>
+                                Pool Side 
+                            </span>
+                        </section>
+    
+                    </section>
+
+                    <section class="upgrade-checkboxes">
+                        <input type="checkbox" name="extra" id="Private Jacuzzi">
+                        <section class="upgrade-text">
+                            <span>
+                                Private Jacuzzi
+                            </span>
+                        </section>
+    
+                    </section>
+
+                    <section class="upgrade-checkboxes">
+                        <input type="checkbox" name="extra" id="Attached Rooms">
+                        <section class="upgrade-text">
+                            <span>
+                                Attached Rooms
+                            </span>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="user-input">
+                    <section class="input-fields">
+                        <label for="beds">Extra Beds</label>
+                        <input type="number" name="beds" id="beds" placeholder="Enter number of extra beds (Only 3 extra beds per room)" title="Maximum of 3 beds per room" min="0" max="3" value="0">
+                    </section>
+                    <section class="input-fields">
+                        <label for="kids">Number of Kids (Above the age of 5)</label>
+                        <input type="number" name="kids" id="kids" placeholder="Enter number of kids above the age of 5" min="0" value="0">
+                    </section>
+                </section>
+
+
+                <section class="promo-code">
+                    <label for="Promo">Promo Code</label>
+                    <input type="text" name="promo" id="promo" placeholder="Enter Promotion Code" maxlength="12">
+                </section>
+
+                <section class="book-room-button">
+                    <button type="submit" id="bookrooms">Book Now</button>
+                </section>
+                <section id="current-room-booking">
+                    <h3>Current Room Booking</h3>
+                </section>
+            </form>
+
+            <!-- Adventure Booking Form -->
+            <form action="" id="adventure-form">
+                <section class="form-heading">Adventure Booking</section>
+                <section class="adventure-input">
+                    <section class="person-input">
+                        <label for="localadult">No: of Adults (Local)</label>
+                        <input type="number" name="localadult" id="localad" placeholder="Enter No.of Local Adults" value="0" min="0" max="5">
+                    </section>
+                    <section class="person-input">
+                        <label for="localkids">No: of Kids (Local)</label>
+                        <input type="number" name="localkids" id="localk" placeholder="Enter No.of Local Kids" value="0"  min="0" max="5">
+                    </section>
+                    <section class="person-input">
+                        <label for="foreignadult">No: of Adults (Foreign)</label>
+                        <input type="number" name="foreignadult" id="foreignad" placeholder="Enter No.of Foreign Adults" value="0" min="0" max="5">
+                    </section>
+                    <section class="person-input">
+                        <label for="foreignkids">No: of Kids (Foreign)</label>
+                        <input type="number" name="foreignkids" id="foreignk" placeholder="Enter No.of Foreign Kids" value="0" min="0" max="5">
+                    </section>
+                </section>
+
+                <section class="duration">
+                        <label for="hours">Duration (Hours)</label>
+                        <input type="number" name="hours" id="duration" min="1" placeholder="Enter Duration in Hours" value="0" min="0" max="4">
+                </section>
+
+                <h2>Guide Requirements</h2>
+                <section class="tour-guide">
+                    <section class="tour-guide-checkboxes">
+                        <input type="checkbox" name="guide" id="adultguide">
+                        <section class="tour-guide-text">
+                            <span>
+                                Guide for Adults
+                            </span>
+                        </section>
+                    </section>
+
+                    <section class="tour-guide-checkboxes">
+                        <input type="checkbox" name="guide" id="kidguide">
+                        <section class="tour-guide-text">
+                            <span>
+                               Guide for Kids
+                            </span>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="book-room-button">
+                    <button type="submit" id="bookadventure">Book Adventure</button>
+                </section>
+                <section class="favourite-loyalty-button">
+                    <button type="submit" id="favourite">Favourites</button>
+                    <button type="button" id="loyalty">Jetwing Loyalty</button>
+                </section>
+                <section id="current-adv-booking">
+                    <h3>Current Adventure Booking</h3>
+                </section>
+                <section id="overallbooking">
+                    <h3>Overall Booking</h3>
+                </section>
+            </form>
+        </section>
+    </section>  
+  </body>
+  <script src="main.js"></script>
+</html> 
+            
+            
+        
+      
+    

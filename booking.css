@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+/*Header*/
+.header{
+    overflow:hidden;
+    background-color:white;
+    padding: 20px 10px;
+    position: fixed;
+    z-index: 3;
+}
+.header a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.header a:hover{
+    background-color: rgba(231,24,143);
+    color: black;
+}
+.header img{
+    width: 10%;
+}
+.header a.active{
+    background-color: rgba(231,24,143);
+    color: white;
+}
+.header-data{
+    float: right;
+}
+/*header media queries*/
+@media screen and (max-width: 750px) {
+    .header{
+        position: sticky;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header img{
+        width:40%;
+    }
+    .header a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-data{
+        float: none;
+    }
+}
+
+
+
+
+body {
+    background:white;
+    margin: 0;
+    padding: 0;
+}
+
+.introland {
+    position: relative;
+    width: 100%;
+}
+.introland img {
+    width: 100%;
+    height: auto;
+    padding-top: 10%;
+}
+.introland h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    text-align: center;
+    width:100%;
+    top:50%;
+    color: white;
+    font-size: clamp(30px,8vw,400px);
+}
+
+
+
+
+
+
+
+
+
+/*Booking page */
+/*room-inputform*/
+
+.booking-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 3%;
+}
+.form-heading{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(231,24,143);
+    font-size: clamp(20px,2.5vw,80px);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+    display: flex;
+    color:rgba(231,24,143);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+#booking{
+    width: auto;
+}
+#booking h2{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: rgba(231,24,143);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+
+label{
+    padding-top: 3%;
+    padding-bottom: 2%;
+    font-size: clamp(20px,1.5vw,100px);
+    color: black;
+    text-align: center;
+}
+
+
+input,select{
+    padding: 10px 10px;
+    background-color: #bbcada;
+    border:rgba(231,24,143) 1px solid;
+}
+.user-input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2%;
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 49%;
+}
+.room-types{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4%;
+}
+.room-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.upgrade{
+    display: flex;
+    column-gap: 1%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+.upgrade-checkboxes{
+    position: relative;
+    width: 20%;
+    margin: 3px;
+    float: left;
+    border: 1px solid rgba(231,24,143);
+    background-color: #bbcada;
+    border-radius: 6px;
+    text-align: center;
+    color: black;
+    font-weight: 10%;
+    font-size: clamp(10px,1.3vw,250px);
+}
+.upgrade-checkboxes input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upgrade-checkboxes input:checked ~ .upgrade-text{
+    background-color:rgba(231,24,143);
+    color: white;
+}
+
+.upgrade-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
+  transition: .5s ease;
+}
+
+.promo-code{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-top: 5%;
+    background-color: rgba(231,24,143);
+    border-radius: 5%;
+    margin-left: 35%;
+}
+.promo-code input{
+   width: 50%;
+   background-color: #bbcada;
+   margin-left: 5%;
+}
+
+
+
+
+
+
+.book-room-button{
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bookrooms{
+    padding: 2%;
+    border-radius: 6px;
+    font-size: clamp(5px,1.5vw,100px);
+    border: none;
+    width: 20%;
+    background-color: rgba(231, 24, 141, 0.605);
+}
+
+#bookrooms:hover{
+    cursor: pointer;
+    background-color: rgba(231,24,143);
+    color: white;
+}
+
+
+
+#current-room-booking{
+    border: black 1px solid;
+    margin-top: 2%;
+    color: black;
+    background-color: #bbcada;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    width: 40%;
+    margin-left: 30%;
+}
+#current-room-booking h3{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/*Adventure form*/
+#adventure-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 3%;
+    margin-top: 10%;
+}
+
+.adventure-input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2%;
+    justify-content: center;
+    padding-top: 3%;
+}
+.person-input{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.duration{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    justify-content: center;
+    padding-top: 3%;
+    margin-left: 35%;
+}
+
+.tour-guide{
+    display: flex;
+    column-gap: 1%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+.tour-guide-checkboxes{
+    position: relative;
+    width: 20%;
+    margin: 5px;
+    float: left;
+    border: 1px solid rgba(231,24,143);
+    background-color: #c8d2dd;
+    border-radius: 6px;
+}
+.tour-guide-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+    font-size: clamp(10px,1.3vw,250px);
+    text-align: center;
+    color:black;
+}
+.tour-guide-checkboxes input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.tour-guide-checkboxes input:checked ~ .tour-guide-text{
+    background-color:rgba(231,24,143);
+    color: white;
+}
+
+
+.book-adventure-button{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bookadventure{
+    padding: 2%;
+    border-radius: 6px;
+    font-size: clamp(5px,1.5vw,100px);
+    border: none;
+    width: 20%;
+    background-color: rgba(231, 24, 141, 0.605);
+}
+
+#bookadventure:hover{
+    cursor: pointer;
+    background-color: rgba(231,24,143);
+    color: white;
+}
+
+#current-adv-booking{
+    border: black 1px solid;
+    margin-top: 2%;
+    color: black;
+    background-color: #bbcada;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    width: 60%;
+    margin-left: 20%;
+}
+#current-adv-booking h3{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#overallbooking{
+    border: black 1px solid;
+    margin-top: 2%;
+    color: black;
+    background-color: #bbcada;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    width: 60%;
+    margin-left: 20%;
+}
+#overallbooking h3{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Favourite and Loyalty buttons*/
+.favourite-loyalty-button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 2%;
+    margin-top: 2%;
+    padding-left: 30%;
+    margin-bottom: 2%;
+    align-items: center;
+
+}
+
+.favourite-loyalty-button #favourite{
+    border-radius: 6px;
+    border: none;
+    font-size: clamp(5px,1vw,100px);
+    padding: 1%;
+    width: 40%;
+    background-color:rgba(231, 24, 141, 0.605);
+}
+
+.favourite-loyalty-button #loyalty{
+    border-radius: 6px;
+    border: none;
+    font-size: clamp(5px,1vw,100px);
+    padding: 1%;
+    width: 40%;
+    background-color:rgba(231, 24, 141, 0.605);
+}
+
+.favourite-loyalty-button #favourite #favouriteicon{
+    border-radius: 20px;
+}
+#favourite:hover{
+    cursor: pointer;
+    background-color: rgba(231,24,143);
+}
+#loyalty:hover{
+    background-color: rgba(255, 217, 0, 0.905);
+    color: #000000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+
+
+/*Booking Page Responsiveness*/
+
+@media (max-width:750px){
+    .booking-container{
+        flex-direction: column;
+    }
+    #bookadventure{
+        font-size: 20px;
+    }
+    #bookrooms{
+        font-size: 20px;
+    }
+    .favourite-loyalty-button #favourite{
+        font-size: 15px;
+    }  
+    .favourite-loyalty-button #loyalty{
+        font-size: 15px;
+    }  
+    .input-fields {
+        width: 100%;
+    }
+
+    .room-input {
+        flex: 100%;
+    }
+    .room-input {
+        flex: 100%;
+    }
+    .upgrade-checkboxes {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .tour-guide-checkboxes {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .book-room-button,
+    .favourite-loyalty-button {
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+    .promo-code {
+        width: 40%;
+        margin-bottom: 15px;
+    }
+}
+
+
